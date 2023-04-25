@@ -1,15 +1,18 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import 'dotenv/config';
+
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
+
 const port = process.env.PORT || 3000;
 const environment = process.env.ENVIRONMENT || 'sandbox';
-const client_id = process.env.CLIENT_ID;
-const client_secret = process.env.CLIENT_SECRET;
+const client_id = process.env.CLIENT_ID || "AS5TvYnTLz4B7d0op-MGYzK30rtnqpOxt-8p0GM3h0dEuV5b-CAxlGn7-Xq4wRfUqaoWiSVrkXM8y45R"
+const client_secret = process.env.CLIENT_SECRET || "EFac3EPBt4EqJJlo18u1r6gdsBtgK_9clSvjKjvxOoVuv1wi25ZOat5aPjQsL7_obieBEC5AfQq2CFXu"
 const endpoint_url = environment === 'sandbox' ? 'https://api-m.sandbox.paypal.com' : 'https://api-m.paypal.com';
 
 /**
