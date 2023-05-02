@@ -1,7 +1,7 @@
 {
-    "name": "ppcp-starter-node",
+    "name": "paypal",
     "version": "1.0.0",
-    "description": "Starter code for a Node.js app for PayPal Complete Payments - Standard Checkout",
+    "description": "PayPal Complete Payments - Standard Checkout",
     "main": "index.js",
     "type": "module",
     "scripts": {
